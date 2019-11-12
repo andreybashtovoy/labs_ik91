@@ -1,10 +1,10 @@
 /*
---------КП №1--------
+--------РљРџ в„–1--------
 
-Если помогло, подпишись на инстик автора)00)0))
+Р•СЃР»Рё РїРѕРјРѕРіР»Рѕ, РїРѕРґРїРёС€РёСЃСЊ РЅР° РёРЅСЃС‚РёРє Р°РІС‚РѕСЂР°)00)0))
 @andrey_bashtovoy_sd
 
-Принимал не Лес.
+РџСЂРёРЅРёРјР°Р» РЅРµ Р›РµСЃ.
 
 */
 
@@ -53,50 +53,50 @@ void open_menu(int menu){
 	int menu_len = 12;
 	struct menu menu_arr[menu_len];
 
-	set_string(menu_arr[0].name, "МЕНЮ");
+	set_string(menu_arr[0].name, "РњР•РќР®");
 	menu_arr[0].num_acts = 2;
-	set_string(menu_arr[0].acts[0], "Файл");
-	set_string(menu_arr[0].acts[1], "Записи");
+	set_string(menu_arr[0].acts[0], "Р¤Р°Р№Р»");
+	set_string(menu_arr[0].acts[1], "Р—Р°РїРёСЃРё");
 	menu_arr[0].funs[0] = 1;
 	menu_arr[0].funs[1] = 5;
 	menu_arr[0].prev = 0;
 	menu_arr[0].fun = NULL;
 
 
-	set_string(menu_arr[1].name, "ФАЙЛ");
+	set_string(menu_arr[1].name, "Р¤РђР™Р›");
 	menu_arr[1].num_acts = 3;
-	set_string(menu_arr[1].acts[0], "Создать");
-	set_string(menu_arr[1].acts[1], "Прочитать");
-	set_string(menu_arr[1].acts[2], "Удалить");
+	set_string(menu_arr[1].acts[0], "РЎРѕР·РґР°С‚СЊ");
+	set_string(menu_arr[1].acts[1], "РџСЂРѕС‡РёС‚Р°С‚СЊ");
+	set_string(menu_arr[1].acts[2], "РЈРґР°Р»РёС‚СЊ");
 	menu_arr[1].funs[0] = 2;
 	menu_arr[1].funs[1] = 3;
 	menu_arr[1].funs[2] = 4;
 	menu_arr[1].prev = 0;
 	menu_arr[1].fun = NULL;
 
-	set_string(menu_arr[2].name, "Создание Файла");
+	set_string(menu_arr[2].name, "РЎРѕР·РґР°РЅРёРµ Р¤Р°Р№Р»Р°");
 	menu_arr[2].num_acts = 0;
 	menu_arr[2].prev = 1;
 	menu_arr[2].fun = create_file;
 
-	set_string(menu_arr[3].name, "Чтение файла");
+	set_string(menu_arr[3].name, "Р§С‚РµРЅРёРµ С„Р°Р№Р»Р°");
 	menu_arr[3].num_acts = 0;
 	menu_arr[3].prev = 1;
 	menu_arr[3].fun = read_file;
 
-	set_string(menu_arr[4].name, "Удаление файла");
+	set_string(menu_arr[4].name, "РЈРґР°Р»РµРЅРёРµ С„Р°Р№Р»Р°");
 	menu_arr[4].num_acts = 0;
 	menu_arr[4].prev = 1;
 	menu_arr[4].fun = remove_file;
 
-	set_string(menu_arr[5].name, "Записи");
+	set_string(menu_arr[5].name, "Р—Р°РїРёСЃРё");
 	menu_arr[5].num_acts = 6;
-	set_string(menu_arr[5].acts[0], "Создать");
-	set_string(menu_arr[5].acts[1], "Прочитать");
-	set_string(menu_arr[5].acts[2], "Удалить");
-	set_string(menu_arr[5].acts[3], "Сортировать");
-	set_string(menu_arr[5].acts[4], "Вставить");
-	set_string(menu_arr[5].acts[5], "Редактировать");
+	set_string(menu_arr[5].acts[0], "РЎРѕР·РґР°С‚СЊ");
+	set_string(menu_arr[5].acts[1], "РџСЂРѕС‡РёС‚Р°С‚СЊ");
+	set_string(menu_arr[5].acts[2], "РЈРґР°Р»РёС‚СЊ");
+	set_string(menu_arr[5].acts[3], "РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ");
+	set_string(menu_arr[5].acts[4], "Р’СЃС‚Р°РІРёС‚СЊ");
+	set_string(menu_arr[5].acts[5], "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ");
 	menu_arr[5].funs[0] = 6;
 	menu_arr[5].funs[1] = 7;
 	menu_arr[5].funs[2] = 9;
@@ -106,39 +106,39 @@ void open_menu(int menu){
 	menu_arr[5].prev = 0;
 	menu_arr[5].fun = NULL;
 
-	set_string(menu_arr[6].name, "СОЗДАНИЕ ЗАПИСЕЙ");
+	set_string(menu_arr[6].name, "РЎРћР—Р”РђРќРР• Р—РђРџРРЎР•Р™");
 	menu_arr[6].num_acts = 0;
 	menu_arr[6].prev = 5;
 	menu_arr[6].fun = create_record;
 
-	set_string(menu_arr[7].name, "ЧТЕНИЕ ЗАПИСЕЙ");
+	set_string(menu_arr[7].name, "Р§РўР•РќРР• Р—РђРџРРЎР•Р™");
 	menu_arr[7].num_acts = 0;
 	menu_arr[7].prev = 5;
 	menu_arr[7].fun = read_records;
 
-	set_string(menu_arr[8].name, "РЕДАКТИРОВАНИЕ");
+	set_string(menu_arr[8].name, "Р Р•Р”РђРљРўРР РћР’РђРќРР•");
 	menu_arr[8].num_acts = 0;
 	menu_arr[8].prev = 5;
 	menu_arr[8].fun = edit_record;
 
-	set_string(menu_arr[9].name, "УДАЛЕНИЕ ЗАПИСИ");
+	set_string(menu_arr[9].name, "РЈР”РђР›Р•РќРР• Р—РђРџРРЎР");
 	menu_arr[9].num_acts = 0;
 	menu_arr[9].prev = 5;
 	menu_arr[9].fun = remove_record;
 
-	set_string(menu_arr[10].name, "СОРТИРОВКА");
+	set_string(menu_arr[10].name, "РЎРћР РўРР РћР’РљРђ");
 	menu_arr[10].num_acts = 0;
 	menu_arr[10].prev = 5;
 	menu_arr[10].fun = sort_records;
 
-	set_string(menu_arr[11].name, "ВСТАВИТЬ ЗАПИСЬ");
+	set_string(menu_arr[11].name, "Р’РЎРўРђР’РРўР¬ Р—РђРџРРЎР¬");
 	menu_arr[11].num_acts = 0;
 	menu_arr[11].prev = 5;
 	menu_arr[11].fun = insert_record;
 
 
 	system("cls");
-	printf("%s %s\n\n","Нажмите <ESC>, чтобы ", menu==0?"выйти":"вернуться");
+	printf("%s %s\n\n","РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ ", menu==0?"РІС‹Р№С‚Рё":"РІРµСЂРЅСѓС‚СЊСЃСЏ");
 	printf("%s\n", menu_arr[menu].name);
 	for(int i=0;i<menu_arr[menu].num_acts;i++){
 		printf("%d. %s\n", (i+1), menu_arr[menu].acts[i]);
@@ -168,12 +168,12 @@ void open_menu(int menu){
 
 void create_file(int ret){
 	FILE *fp;
-	printf("Имя файла: ");
+	printf("РРјСЏ С„Р°Р№Р»Р°: ");
 	char filename[16];
 	get_str(filename, 3, ret, NULL);
 	fp=fopen(filename, "w");
 	fclose(fp);
-	printf("\nОк! Нажмите <ESC>, чтобы вернуться.");
+	printf("\nРћРє! РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.");
 }
 
 void read_file(int ret){
@@ -184,14 +184,14 @@ void read_file(int ret){
 	fp=fopen(filename, "r");
 
 	if(fp==NULL){
-		printf("\nТакого файла не существует. Нажмите <ESC>, чтобы вернуться.\n");
+		printf("\nРўР°РєРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚. РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.\n");
 	}else{
 		printf("\n");
 		while(!feof(fp)){
 			printf("%c", fgetc(fp));
 		}
 		fclose(fp);
-		printf("\nНажмите <ESC>, чтобы вернуться.");
+		printf("\nРќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.");
 	}
 }
 
@@ -200,7 +200,7 @@ void remove_file(int ret){
 	char filename[16];
 	get_str(filename, 3, ret, NULL);
 
-	printf("\n%s %s\n", remove(filename)==-1?"Такого файла на существует.":"Ок!", "Нажмите <ESC>, чтобы вернуться.");
+	printf("\n%s %s\n", remove(filename)==-1?"РўР°РєРѕРіРѕ С„Р°Р№Р»Р° РЅР° СЃСѓС‰РµСЃС‚РІСѓРµС‚.":"РћРє!", "РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.");
 }
 
 typedef struct{
@@ -211,7 +211,7 @@ typedef struct{
 
 void create_record(int ret){
 	FILE *fp;
-	printf("Имя файла: ");
+	printf("РРјСЏ С„Р°Р№Р»Р°: ");
 	char filename[16];
 	get_str(filename, 3, ret, NULL);
 	fp=fopen(filename, "a");
@@ -221,12 +221,12 @@ void create_record(int ret){
 	while(1){
 		i++;
 		rec region;
-		printf("\nЗапись №%d\n", i);
-		printf(">>> Название области: ");
+		printf("\nР—Р°РїРёСЃСЊ в„–%d\n", i);
+		printf(">>> РќР°Р·РІР°РЅРёРµ РѕР±Р»Р°СЃС‚Рё: ");
 		get_str(region.name, 3, ret, fp);
-		printf("\n>>> Площадь: ");
+		printf("\n>>> РџР»РѕС‰Р°РґСЊ: ");
 		region.square = get_double(ret, fp);
-		printf("\n>>> Население: ");
+		printf("\n>>> РќР°СЃРµР»РµРЅРёРµ: ");
 		region.nas = get_int(ret, fp);
 		fprintf(fp, "%s %lf %d\n", region.name, region.square, region.nas);
 	}
@@ -236,17 +236,17 @@ void create_record(int ret){
 
 void insert_record(int ret){
 	FILE *fp;
-	printf("Имя файла: ");
+	printf("РРјСЏ С„Р°Р№Р»Р°: ");
 	char filename[16];
 	get_str(filename, 3, ret, NULL);
 	fp=fopen(filename, "a");
 
 	rec region;
-	printf("\n>>> Название области: ");
+	printf("\n>>> РќР°Р·РІР°РЅРёРµ РѕР±Р»Р°СЃС‚Рё: ");
 	get_str(region.name, 3, ret, fp);
-	printf("\n>>> Площадь: ");
+	printf("\n>>> РџР»РѕС‰Р°РґСЊ: ");
 	region.square = get_double(ret, fp);
-	printf("\n>>> Население: ");
+	printf("\n>>> РќР°СЃРµР»РµРЅРёРµ: ");
 	region.nas = get_int(ret, fp);
 	fprintf(fp, "%s %lf %d\n", region.name, region.square, region.nas);
 
@@ -255,11 +255,11 @@ void insert_record(int ret){
 
 	sort_file(fp, filename, ret);
 
-	printf("\nОК! Нажмите <ESC>, чтобы вернуться.\n");
+	printf("\nРћРљ! РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.\n");
 }
 
 int print_table(FILE *fp){
-	printf("\n№\tНАЗВАНИЕ\tПЛОЩАДЬ\t\tНАСЕЛЕНИЕ\n");
+	printf("\nв„–\tРќРђР—Р’РђРќРР•\tРџР›РћР©РђР”Р¬\t\tРќРђРЎР•Р›Р•РќРР•\n");
 	int i=0;
 
 	while(!feof(fp)){
@@ -274,17 +274,17 @@ int print_table(FILE *fp){
 
 void read_records(int ret){
 	FILE *fp;
-	printf("Имя файла: ");
+	printf("РРјСЏ С„Р°Р№Р»Р°: ");
 	char filename[16];
 	get_str(filename, 3, ret, NULL);
 	fp=fopen(filename, "r");
 
 	if(fp==NULL){
-		printf("\nТакого файла не существует. Нажмите <ESC>, чтобы вернуться.\n");
+		printf("\nРўР°РєРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚. РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.\n");
 	}else{
 		print_table(fp);
 
-		printf("\nНажмите <ESC>, чтобы вернуться.\n");
+		printf("\nРќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.\n");
 
 		fclose(fp);
 	}
@@ -292,19 +292,19 @@ void read_records(int ret){
 
 void edit_record(int ret){
 	FILE *fp;
-	printf("Имя файла: ");
+	printf("РРјСЏ С„Р°Р№Р»Р°: ");
 	char filename[16];
 	get_str(filename, 3, ret, NULL);
 	fp=fopen(filename, "r");
 
 	if(fp==NULL){
-		printf("\nТакого файла не существует. Нажмите <ESC>, чтобы вернуться.\n");
+		printf("\nРўР°РєРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚. РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.\n");
 	}else{
 		int count = print_table(fp);
 
 		int num = 0;
 		while(num<1 || num>count){
-			printf("\nВыберите номер записи, которую хотите редактировать: ");
+			printf("\nР’С‹Р±РµСЂРёС‚Рµ РЅРѕРјРµСЂ Р·Р°РїРёСЃРё, РєРѕС‚РѕСЂСѓСЋ С…РѕС‚РёС‚Рµ СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ: ");
 			num = get_int(ret, fp);
 		}
 
@@ -320,11 +320,11 @@ void edit_record(int ret){
 		}
 
 		rec region;
-		printf("\n>>> Название области: \n");
+		printf("\n>>> РќР°Р·РІР°РЅРёРµ РѕР±Р»Р°СЃС‚Рё: \n");
 		get_str(records[num-1].name, 3, ret, fp);
-		printf("\n>>> Площадь: \n");
+		printf("\n>>> РџР»РѕС‰Р°РґСЊ: \n");
 		records[num-1].square = get_double(ret, fp);
-		printf("\n>>> Население: \n");
+		printf("\n>>> РќР°СЃРµР»РµРЅРёРµ: \n");
 		records[num-1].nas = get_int(ret, fp);
 
 		fclose(fp);
@@ -337,25 +337,25 @@ void edit_record(int ret){
 
 		fclose(fp);
 
-		printf("\nОк! Нажмите <ESC>, чтобы вернуться.\n");
+		printf("\nРћРє! РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.\n");
 	}
 }
 
 void remove_record(int ret){
 	FILE *fp;
-	printf("Имя файла: ");
+	printf("РРјСЏ С„Р°Р№Р»Р°: ");
 	char filename[16];
 	get_str(filename, 3, ret, NULL);
 	fp=fopen(filename, "r");
 
 	if(fp==NULL){
-		printf("\nТакого файла не существует. Нажмите <ESC>, чтобы вернуться.\n");
+		printf("\nРўР°РєРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚. РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.\n");
 	}else{
 		int count = print_table(fp);
 
 		int num = 0;
 		while(num<1 || num>count){
-			printf("\nВыберите номер записи, которую хотите удалить: ");
+			printf("\nР’С‹Р±РµСЂРёС‚Рµ РЅРѕРјРµСЂ Р·Р°РїРёСЃРё, РєРѕС‚РѕСЂСѓСЋ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ: ");
 			num = get_int(ret, fp);
 		}
 
@@ -381,14 +381,14 @@ void remove_record(int ret){
 
 		fclose(fp);
 
-		printf("\nОк! Нажмите <ESC>, чтобы вернуться.\n");
+		printf("\nРћРє! РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.\n");
 	}
 }
 
 void sort_file(FILE *fp, char *filename, int ret){
 	int count = print_table(fp);
 
-	printf("\nВыберите столбец, по которому будет сортировка:\n1. Название\n2. Площадь\n3. Население\n");
+	printf("\nР’С‹Р±РµСЂРёС‚Рµ СЃС‚РѕР»Р±РµС†, РїРѕ РєРѕС‚РѕСЂРѕРјСѓ Р±СѓРґРµС‚ СЃРѕСЂС‚РёСЂРѕРІРєР°:\n1. РќР°Р·РІР°РЅРёРµ\n2. РџР»РѕС‰Р°РґСЊ\n3. РќР°СЃРµР»РµРЅРёРµ\n");
 
 	char sym=0;
 	while((sym<49 || sym>51) && sym!=27){
@@ -400,7 +400,7 @@ void sort_file(FILE *fp, char *filename, int ret){
 		open_menu(ret);
 	}
 
-	printf("\nВыберите тип сортировки:\n1. По возрастанию\n2. По убыванию\n");
+	printf("\nР’С‹Р±РµСЂРёС‚Рµ С‚РёРї СЃРѕСЂС‚РёСЂРѕРІРєРё:\n1. РџРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ\n2. РџРѕ СѓР±С‹РІР°РЅРёСЋ\n");
 
 	char stype=0;
 	while((stype<49 || stype>50) && stype!=27){
@@ -457,16 +457,16 @@ void sort_file(FILE *fp, char *filename, int ret){
 
 void sort_records(int ret){
 	FILE *fp;
-	printf("Имя файла: ");
+	printf("РРјСЏ С„Р°Р№Р»Р°: ");
 	char filename[16];
 	get_str(filename, 3, ret, NULL);
 	fp=fopen(filename, "r");
 
 	if(fp==NULL){
-		printf("\nТакого файла не существует. Нажмите <ESC>, чтобы вернуться.\n");
+		printf("\nРўР°РєРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚. РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.\n");
 	}else{
 		sort_file(fp, filename, ret);
-		printf("\nОк! Нажмите <ESC>, чтобы вернуться.\n");
+		printf("\nРћРє! РќР°Р¶РјРёС‚Рµ <ESC>, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ.\n");
 	}
 }
 
